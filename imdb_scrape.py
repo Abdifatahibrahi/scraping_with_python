@@ -12,5 +12,9 @@ for tr in trs:
     td = tr.find('td', {'class':'titleColumn'})
     movie_name = td.a.string
     movie_year = td.span.string
-    print(movie_name, movie_year)
+    movie_id = td.a['href']
+    movie_url = f'https://www.imdb.com/{movie_id}'
+    print(movie_name, movie_year, movie_url)
+
+    
 
