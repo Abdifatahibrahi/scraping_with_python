@@ -18,8 +18,8 @@ for x in range(1, 4):
         for link in product.find_all('a', href=True):
             product_links.append(base_url + link['href'])
 
-# for link in product_links:
-#     print(link)
+for link in product_links:
+    print(link)
 
 for link in product_links:
     res = requests.get(link, headers=headers)
